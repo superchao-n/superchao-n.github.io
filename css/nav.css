@@ -1,0 +1,57 @@
+#nav .menus_items {
+    position: absolute;
+    width: fit-content;
+    white-space: nowrap;  /*强制不换行*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#nav .menus_items .menus_item:hover .menus_item_child {
+    display: flex;
+    border-radius: 15px;
+}
+
+#nav .menus_items .menus_item .menus_item_child li {
+    border-radius: 15px;
+}
+
+#nav .menus_items .menus_item .menus_item_child li:first-child {
+    border-radius: 15px;
+}
+
+#nav .menus_items .menus_item .menus_item_child li:last-child {
+    border-radius: 15px;
+}
+
+#nav .menus_items .menus_item .menus_item_child li {
+    transition: all 0.5s ease 0s;
+}
+
+#nav .menus_items .menus_item .menus_item_child li:hover {
+    background-color: #ffcfe4;
+}
+
+/* 这里的2是代表导航栏的第二个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(1) .menus_item_child {
+    left: -65px;
+}
+
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -110px;
+}
+
+.menus_items .menus_item:nth-child(3) .menus_item_child {
+    left: -110px;
+}
+
+.menus_items .menus_item:nth-child(4) .menus_item_child {
+    left: -40px;
+}
+
+.menus_items .menus_item:nth-child(5) .menus_item_child {
+    left: -75px;
+}
+
+#nav .site-page:not(.child):after {
+    border: 15px;
+}
