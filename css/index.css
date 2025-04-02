@@ -341,7 +341,7 @@ template {
   left: 5%;
   z-index: 1;
   color: var(--hr-before-color);
-  content: '\f0c4';
+  content: '\f197';
   font-size: 20px;
   line-height: 1;
   -webkit-transition: all 1s ease-in-out;
@@ -1395,6 +1395,16 @@ body {
 input::placeholder {
   color: var(--font-color);
 }
+#web_bg {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 h1,
 h2,
 h3,
@@ -1709,7 +1719,7 @@ figure.highlight pre .javascript .function {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-.container .highlight-tools {
+.highlight-tools {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -1730,10 +1740,10 @@ figure.highlight pre .javascript .function {
   font-size: var(--global-font-size);
   overflow: hidden;
 }
-.container .highlight-tools > * {
+.highlight-tools > * {
   padding: 5px;
 }
-.container .highlight-tools i {
+.highlight-tools i {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -1741,23 +1751,23 @@ figure.highlight pre .javascript .function {
   -ms-transition: all 0.3s;
   transition: all 0.3s;
 }
-.container .highlight-tools i:hover {
+.highlight-tools i:hover {
   color: #49b1f5;
 }
-.container .highlight-tools.closed ~ * {
+.highlight-tools.closed ~ * {
   display: none;
 }
-.container .highlight-tools.closed .expand {
+.highlight-tools.closed .expand {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-.container .highlight-tools > .macStyle {
+.highlight-tools > .macStyle {
   padding: 0;
 }
-.container .highlight-tools .code-lang {
+.highlight-tools .code-lang {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -o-box-flex: 1;
@@ -1775,7 +1785,7 @@ figure.highlight pre .javascript .function {
   -webkit-user-select: none;
   padding: 2px;
 }
-.container .highlight-tools .copy-notice {
+.highlight-tools .copy-notice {
   padding-right: 2px;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -1786,7 +1796,7 @@ figure.highlight pre .javascript .function {
   -ms-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
-.container .highlight-tools .code-lang {
+.highlight-tools .code-lang {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -o-box-flex: 1;
@@ -1795,17 +1805,17 @@ figure.highlight pre .javascript .function {
   -ms-flex: 1;
   flex: 1;
 }
-.container .gutter {
+.gutter {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-user-select: none;
 }
-.container .gist table {
+.gist table {
   width: auto;
 }
-.container .gist table td {
+.gist table td {
   border: none;
 }
 .article-sort {
@@ -3269,6 +3279,13 @@ figure.highlight pre .javascript .function {
   background-attachment: scroll;
   background-position: bottom;
   background-size: cover;
+}
+#footer:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mark-bg);
+  content: '';
 }
 #footer-wrap {
   position: relative;
